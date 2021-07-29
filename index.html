@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTWITTER</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{title}}</h1>
+
+        <form @submit.prevent="onSubmit">
+            <textarea
+                v-model="item"
+                required 
+                placeholder="Type your twit"
+            ></textarea>
+
+            <br />
+            <button type="submit">Submit</button>
+        </form>
+
+        <ul>
+            <li v-for="tweet in items">{{item}}</li>
+        </ul>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
